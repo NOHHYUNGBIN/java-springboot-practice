@@ -49,6 +49,7 @@ public class AppContext {
 
     private void doResource() {
         for(Object bean : map.values()) {
+            System.out.println("bean = " + bean);
             for(Field field : bean.getClass().getDeclaredFields()) {
                 if(field.getAnnotation(Resource.class) != null) {
                     try {
